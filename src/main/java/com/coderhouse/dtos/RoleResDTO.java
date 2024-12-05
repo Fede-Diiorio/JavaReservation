@@ -7,7 +7,8 @@ import lombok.Setter;
 @Getter
 @Setter
 @AllArgsConstructor
-public class TableReqDTO {
-	
-	private int capacity;
+public class RoleResDTO {
+
+	private Long level;
+	private String roleName;
 }

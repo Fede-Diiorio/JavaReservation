@@ -2,8 +2,8 @@ package com.coderhouse.repositories;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 
-import jakarta.persistence.Table;
+import com.coderhouse.models.Role;
 
-public interface TableRepository extends JpaRepository<Table, Long>{
+public interface RoleRepository extends JpaRepository<Role, Long>{
 
 }

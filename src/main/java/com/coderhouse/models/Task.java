@@ -14,20 +14,23 @@ import lombok.NoArgsConstructor;
 @Data
 @NoArgsConstructor
 @Entity
-@Table(name = "users")
-public class User {
-
+@Table(name = "tasks")
+public class Task {
+	
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private long id;
 	
-	@Column(nullable = false, length = 100)
-	private String name;
+	@Column(nullable = false)
+	private String description;
 	
-	@Column(nullable = false, length = 100, unique = true)
-	private String email;
+	@Column(nullable = false)
+	private boolean status;
+	
+	@Column(nullable = false)
+	private byte prority;
 	
 	@ManyToOne
-	@JoinColumn(name = "role_id")
-	private Role role;
+	@JoinColumn(name = "project_id")
+	private Project project;
 }
